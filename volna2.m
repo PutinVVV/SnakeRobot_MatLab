@@ -126,14 +126,12 @@ end
 % ТРАЕКТОРИЯ
 figure('Name','Trajectory');
 
-% 1. Добавляем 'HandleVisibility', 'off', чтобы скрыть тепловую карту из легенды
 contourf(XG, YG, Total_Heat_Map, 30, 'LineColor', 'none', 'HandleVisibility', 'off'); 
 hold on; colormap(flipud(jet)); colorbar;
 
-% 2. Добавляем 'DisplayName', 'Trajectory', чтобы вместо "data" было понятное имя
 plot(traj(1,1:k), traj(2,1:k), 'b-', 'LineWidth', 1.5, 'DisplayName', 'Trajectory'); 
 
-% Препятствие (уже имеет имя, оставляем)
+% Препятствие 
 fill([-6 -4 -4 -6], [-4 -4 4 4], [0.4 0.4 0.4], 'DisplayName', 'Obstacle');
 
 % Пунктир зоны эха
